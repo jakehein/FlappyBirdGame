@@ -38,6 +38,7 @@
 			this.RightClouds = new System.Windows.Forms.PictureBox();
 			this.LeftClouds = new System.Windows.Forms.PictureBox();
 			this.MusicTimer = new System.Windows.Forms.Timer(this.components);
+			this.Restart = new System.Windows.Forms.Button();
 			((System.ComponentModel.ISupportInitialize)(this.BottomPipe)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.Bird)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.Ground)).BeginInit();
@@ -86,7 +87,7 @@
 			this.Ground.Image = global::FlappyBirdGame.Properties.Resources.ground;
 			this.Ground.Location = new System.Drawing.Point(-71, 596);
 			this.Ground.Name = "Ground";
-			this.Ground.Size = new System.Drawing.Size(1061, 157);
+			this.Ground.Size = new System.Drawing.Size(1061, 338);
 			this.Ground.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
 			this.Ground.TabIndex = 1;
 			this.Ground.TabStop = false;
@@ -135,6 +136,17 @@
 			this.MusicTimer.Interval = 209000;
 			this.MusicTimer.Tick += new System.EventHandler(this.MusicTimerEvent);
 			// 
+			// Restart
+			// 
+			this.Restart.BackColor = System.Drawing.Color.Transparent;
+			this.Restart.Location = new System.Drawing.Point(610, 721);
+			this.Restart.Name = "Restart";
+			this.Restart.Size = new System.Drawing.Size(190, 64);
+			this.Restart.TabIndex = 7;
+			this.Restart.Text = "Restart";
+			this.Restart.UseVisualStyleBackColor = false;
+			this.Restart.Click += new System.EventHandler(this.Restart_Click);
+			// 
 			// GameCode
 			// 
 			this.AccessibleName = "";
@@ -142,6 +154,7 @@
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.Cyan;
 			this.ClientSize = new System.Drawing.Size(878, 844);
+			this.Controls.Add(this.Restart);
 			this.Controls.Add(this.Ground);
 			this.Controls.Add(this.BottomPipe);
 			this.Controls.Add(this.TopPipe);
@@ -149,8 +162,11 @@
 			this.Controls.Add(this.ScoreText);
 			this.Controls.Add(this.LeftClouds);
 			this.Controls.Add(this.RightClouds);
+			this.MaximumSize = new System.Drawing.Size(900, 900);
+			this.MinimumSize = new System.Drawing.Size(900, 900);
 			this.Name = "GameCode";
 			this.Text = "Flappy Bird Game";
+			this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
 			this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.GameKeyDown);
 			this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.GameKeyUp);
 			((System.ComponentModel.ISupportInitialize)(this.BottomPipe)).EndInit();
@@ -175,6 +191,7 @@
 		private System.Windows.Forms.PictureBox RightClouds;
 		private System.Windows.Forms.PictureBox LeftClouds;
 		private System.Windows.Forms.Timer MusicTimer;
+		private System.Windows.Forms.Button Restart;
 	}
 }
 

@@ -32,6 +32,7 @@ namespace FlappyBirdGame
 			quack = new SoundPlayer(Properties.Resources.Quack_Sound_Effect);
 			PlayMusic();
 			InitializeComponent();
+			Restart.Enabled = false;
 			topPipeObject = new Pipe(TopPipe.Left, TopPipe.Right, TopPipe.Bottom);
 			bottomPipeObject = new Pipe(BottomPipe.Left, BottomPipe.Right, BottomPipe.Top);
 			birdObject = new Bird(Bird.Top, Bird.Bottom, Bird.Left, Bird.Right);
@@ -97,6 +98,7 @@ namespace FlappyBirdGame
 				quack.Play();
 				ScoreString = "Final Score: ";
 				ScoreText.BringToFront();
+				Restart.Enabled = true;
 			}
 		}
 		private bool IsGameOver()
@@ -145,6 +147,11 @@ namespace FlappyBirdGame
 		{
 			music.Stop();
 			music.Play();
+		}
+
+		private void Restart_Click(object sender, EventArgs e)
+		{
+			Application.Restart();
 		}
 	}
 }
